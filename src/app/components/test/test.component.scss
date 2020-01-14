@@ -1,0 +1,79 @@
+.host{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+    background-size: cover;
+    overflow: scroll;
+    
+}
+
+
+#esalud{
+
+        position: relative;
+        display: inline-block;
+        margin-left: 8%;
+        width: 20%;
+       }
+.test{
+    margin-left: -4%;;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    height: 80%;
+    margin-top: 3%
+}
+
+.pregunta{
+    background-color: rgba(255, 255, 255, 0.4);
+        position: relative;
+        display: inline-block;
+        width: 40%;
+        margin-left: 5%;
+        text-align: center;
+        font-size: 2vw;
+    
+}
+
+#testagua{
+        position: relative;
+        display: inline-block;
+        width: 25%;
+        margin-right: 6%;
+        text-align: center;
+        
+
+}
+#testagua1{
+    position: relative;
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+    
+
+}
+
+#imgtestagua{
+        display: inline-block;
+       
+        position: relative;
+        width: 100%;
+}
+
+#btnagua{
+        position: relative;
+        width: 90%;
+        background-color: rgba(255, 255, 255, 0.3);
+        padding-top: 6%;
+        padding-bottom: 6%;
+        font-size: 2vw;
+
+
+}
+

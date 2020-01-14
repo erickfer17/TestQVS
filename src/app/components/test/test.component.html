@@ -1,0 +1,24 @@
+<div class="host" [ngStyle]="{'background': 'url(../../../assets/'+this.consulta.id+'/fondo.jpg)'}">
+    
+    
+<div class="test"> 
+    <img id="esalud" src="../../../assets/evaluatusaludb.png" >
+    <h4 class="pregunta"><strong>{{pregunta}}</strong></h4>
+    
+    <div style="position:relative; width:100%; top:5%">
+    <div id="testagua">
+      <img id="imgtestagua"  [src]="img">
+    </div>
+    
+    <div id="testagua1" style="top:50%">
+      <button id="btnagua" ion-button color="light" (click)="No()"><strong>No/nunca</strong></button><br>
+      <br>
+      <button id="btnagua" ion-button color="light" (click)="Rara()"><strong>Rara Vez</strong> </button><br>
+      <br>
+      <button id="btnagua"ion-button color="light"(click)="Aveces()"><strong> A veces</strong></button><br><br>
+      <button id="btnagua"ion-button color="light" (click)="Frecuentemente()"><strong>Frecuentemente</strong></button> <br><br>
+      <button id="btnagua"ion-button color="light"(click)="Si()"><strong> Si/siempre </strong></button>
+    </div>
+  </div>
+</div> 
+</div>
