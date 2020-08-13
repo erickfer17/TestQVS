@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import {Consulta } from '../../models/consultahabito';
 import { RestService } from '../../services/rest.service';
 import { Preguntas } from '../../models/preguntas'
+import { PortadaComponent } from '../portada/portada.component';
 
 @Component({
   selector: 'app-test',
@@ -21,12 +22,16 @@ export class TestComponent implements OnInit {
   aux:number;
   aux2:number;
   rtest:number;
+  show:boolean = true;
+  show2:boolean = false;
   constructor(private route:ActivatedRoute, private rest:RestService,private router:Router) {
     this.i=0;
     this.resultado=0;
     this.aux=0;
     this.aux2=0;
     this.rtest=0;
+    window.setTimeout(()=>this.show=false,10000);
+    window.setTimeout(() => this.show2=true,5000);
    }
 
    getPreguntas() {
@@ -40,8 +45,24 @@ export class TestComponent implements OnInit {
 
 
   ngOnInit() {
-    var id = +this.route.snapshot.paramMap.get('id');
-    this.consulta.id=id;
+    var test = this.route.snapshot.paramMap.get('test');
+    if(test == "beber-agua-natural"){
+      this.consulta.id = 1;
+    }else if(test == "actitud-positiva"){
+      this.consulta.id = 2;
+    }else if(test == "bien-comer"){
+      this.consulta.id = 3;
+    }else if(test == "actividad-fisica"){
+      this.consulta.id = 4;
+    }else if(test == "descanso-adecuado"){
+      this.consulta.id = 5;
+    }else if(test == "auto-control"){
+      this.consulta.id = 6;
+    }else if(test == "desayunar-mas-cenar-menos"){
+      this.consulta.id = 7;
+    }else if(test == "ser-feliz"){
+      this.consulta.id = 8
+    }
     this.consulta.registro='preguntas';
     this.getPreguntas();
     
@@ -114,13 +135,13 @@ export class TestComponent implements OnInit {
 
 
         goToResult(){
+          var test = this.route.snapshot.paramMap.get('test');
           this.resultado=this.resultado-this.i;
           this.aux=(this.i*5)-this.i;
           this.aux2=(this.resultado/this.aux);
           this.rtest=this.aux2*100;
           window.localStorage.setItem('rtest',this.rtest.toString());
-          this.router.navigate(['/resultado']);
-
+          window.localStorage.setItem('idHabito',this.consulta.id.toString());
+          this.router.navigate(['/'+test+'/resultado']);
         }
-  
 }

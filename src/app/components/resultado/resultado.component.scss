@@ -8,7 +8,7 @@
 	-moz-background-size: cover;
 	-o-background-size: cover;
     background-size: cover;
-    overflow: scroll;
+    overflow-y:scroll;
     
 }
 
@@ -37,6 +37,7 @@
     width: 50%;
     text-align: center;
     top: 5%;
+    height: 100vh;
    
    
 }

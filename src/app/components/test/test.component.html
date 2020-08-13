@@ -1,7 +1,7 @@
 <div class="host" [ngStyle]="{'background': 'url(../../../assets/'+this.consulta.id+'/fondo.jpg)'}">
     
-    
-<div class="test"> 
+
+<div *ngIf="this.show2" class="test"> 
     <img id="esalud" src="../../../assets/evaluatusaludb.png" >
     <h4 class="pregunta"><strong>{{pregunta}}</strong></h4>
     
@@ -22,3 +22,4 @@
   </div>
 </div> 
 </div>
+<app-portada  *ngIf="this.show" [idTest]="this.consulta.id"></app-portada>

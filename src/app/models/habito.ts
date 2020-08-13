@@ -3,4 +3,5 @@ export class Habito {
     habito : string;
     color : string;
     img: string;
+    url:string;
 }

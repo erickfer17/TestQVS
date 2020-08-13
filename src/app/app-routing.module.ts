@@ -6,9 +6,8 @@ import { ResultadoComponent } from './components/resultado/resultado.component';
 
 const routes: Routes = [
   {path:'', component:DashboardComponent},
-  {path:'test/:id', component:TestComponent},
-  {path:'resultado',  component:ResultadoComponent }
-];
+  {path:':test', component:TestComponent},
+  {path:':test/resultado',  component:ResultadoComponent }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

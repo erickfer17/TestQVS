@@ -21,6 +21,8 @@ export class DashboardComponent implements OnInit {
     getHabitos() {
       this.rest.alta(this.habito).subscribe(datos => {
         this.habitos=datos;
+        console.log(this.habitos); 
+        
       });
     }
   ngOnInit() {

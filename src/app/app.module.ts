@@ -8,6 +8,7 @@ import { TestComponent } from './components/test/test.component';
 import { RestService } from './services/rest.service';
 import {InfiniteScrollModule} from 'ngx-infinite-scroll';
 import { ResultadoComponent } from './components/resultado/resultado.component';
+import { PortadaComponent } from './components/portada/portada.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { ResultadoComponent } from './components/resultado/resultado.component';
     DashboardComponent,
     TestComponent,
     ResultadoComponent,
+    PortadaComponent,
   ],
   imports: [
     BrowserModule,

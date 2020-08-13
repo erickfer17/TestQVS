@@ -3,11 +3,11 @@
 <br>
 
 <div id="tests" >
-
+  <img style="width:35%" src="../../../assets/evaluatusaludb.png" > <br><br>
   <div class="test" *ngFor="let habito of habitos" >
-    <input class="logostest" src="{{habito.img}}"type="image" routerLink="/test/{{habito.id}}">
+    <input class="logostest" src="{{habito.img}}"type="image" routerLink="/{{habito.url}}">
    <p   [ngStyle]="{'color': ''+ habito.color +'','line-height':'0%','position':'relative', 'display':'inline-block'}"><strong>  </strong></p>
-   
+   <button class="button" routerLink="/{{habito.url}}">EMPEZAR</button>
   </div>
   
 </div>
